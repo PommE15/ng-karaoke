@@ -53,6 +53,7 @@ main   { height: calc(100% - 20px); width: 100%;}
 .l-col-fixed {
   position: fixed;
   width: 320px;
+  margin-left: 15px;
 }
 
 span[class*="l-"] {
@@ -305,7 +306,7 @@ ul .no-style {  /* remove ul default styling */
     padding: 15px;
   }
 
-  .l-col-fixed.col-lg-4 {
+  .l-col-fixed.f-ta-r {
     margin-left: 15px;
     padding-right: 30px;
   }
