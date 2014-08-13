@@ -1,0 +1,81 @@
+{
+  "id"    : "paristrawberry",
+  "title" : "巴黎草莓",
+  "author": "糯米糰",
+  "src"   : "http://youtu.be/AKfdkLouXS8",
+  "lang"  : "tw",
+  
+  "lyrics": [
+    "有個黑影飄啊飄啊飄過我的面前　我想知道你是誰",
+    "跟著你的背影散發出來一種香味　喔～那不是香水",
+    "剎那之間空氣全都凝結　只有你的香味在我面前",  
+    "曾經聽說可是卻又從沒真的見過　就像巴黎的草莓",
+    "-",                                           
+    "回家的路上我經過幾條熱鬧的街　我～感覺有點累",
+    "繽紛的新潮卻感受不到一絲新鮮　喔～也許有偏見",
+    "一張一張相同精緻的臉　就像翻開雜誌的照片",    
+    "美好的感覺卻只能留在記憶裡面　就像巴黎的草莓",
+    "-",                                     
+    "副歌：",                                     
+    "巴黎的草莓 和你雖然只是擦肩 但我知道那不是人工的香甜",  
+    "巴黎的草莓 這名字真的很美 你是否也有和我一樣相同感覺",
+    "巴黎的草莓 期待你的再次出現 不願意等待變成浪費了時間",  
+    "巴黎的草莓 也許我們會再見 只是一切都已經改變",           
+    "-",                                          
+    "霓虹燈正閃爍巴黎草莓不再經過　我～感受到失落", 
+    "香味也許不同日子還是一樣要過　我～試著去感動", 
+    "這個星球從沒停止轉動　只是愈轉讓愈我矇矓",     
+    "什麼叫做追求誰和誰整天盲從　我～不想再追究",   
+    "-",                                            
+    "副歌"           
+  ],         
+                   
+  "pinyin": [
+    "yǒu gè hēi yǐng piāo ā piāo ā piāo guò wǒ de miàn qián\nwǒ xiǎng zhī dào nǐ shì shuí", 
+    "gēn zhe nǐ de bèi yǐng sàn fā chū lái yī zhǒng xiāng wèi\nwō ~ nà bù shì xiāng shuǐ", 
+    "chà nà zhī jiān kōng qì quán dōu níng jié\nzhī yǒu nǐ de xiāng wèi zài wǒ miàn qián",
+    "céng jīng tīng shuō kě shì què yòu cóng méi zhēn de jiàn guò\njiù xiàng bā lí de cǎo méi",
+    "",
+    "huí jiā de lù shàng wǒ jīng guò jǐ tiáo rè nào de jiē\nwǒ ~ gǎn jiào yǒu diǎn lèi", 
+    "bīn fēn de xīn cháo què gǎn shòu bù dào yī sī xīn xiān\nwō ~ yě xǔ yǒu piān jiàn", 
+    "yī zhāng yī zhāng xiàng tóng jīng zhì de liǎn\njiù xiàng fān kāi zá zhì de zhào piàn", 
+    "měi hǎo de gǎn jiào què zhī néng liú zài jì yì lǐ miàn\njiù xiàng bā lí de cǎo méi", 
+    "",
+    "",
+    "bā lí de cǎo méi\nhé nǐ suī rán zhī shì cā jiān\ndàn wǒ zhī dào nà bù shì rén gōng de xiāng tián", 
+    "bā lí de cǎo méi\nzhè míng zì zhēn de hěn měi\nnǐ shì fǒu yě yǒu hé wǒ yī yàng xiàng tóng gǎn jiào", 
+    "bā lí de cǎo méi\nqī dài nǐ de zài cì chū xiàn\nbù yuàn yì děng dài biàn chéng làng fèi le shí jiān", 
+    "bā lí de cǎo méi\nyě xǔ wǒ men huì zài jiàn\nzhī shì yī qiē dōu yǐ jīng gǎi biàn", 
+    "",
+    "ní hóng dēng zhèng shǎn shuò bā lí cǎo méi bù zài jīng guò\nwǒ ~ gǎn shòu dào shī luò", 
+    "xiāng wèi yě xǔ bù tóng rì zǐ hái shì yī yàng yào guò\nwǒ ~ shì zhe qù gǎn dòng", 
+    "zhè gè xīng qiú cóng méi tíng zhǐ zhuǎn dòng\nzhī shì yù zhuǎn ràng yù wǒ měng lóng", 
+    "shí me jiào zuò zhuī qiú shuí hé shuí zhěng tiān máng cóng\nwǒ ~ bù xiǎng zài zhuī jiū", 
+    ""    
+  ],
+
+  "times": {
+    "s1":  {"str":  34, "end":  42},
+    "s2":  {"str":  43, "end":  51},
+    "s3":  {"str":  51, "end":  59},
+    "s4":  {"str":  60, "end":  68},
+    
+    "s6":  {"str":  77, "end":  85},
+    "s7":  {"str":  86, "end":  93},
+    "s8":  {"str":  94, "end": 102},
+    "s9":  {"str": 103, "end": 110},
+   
+ 
+    "s12": {"str": 118, "end": 126},
+    "s13": {"str": 127, "end": 135},
+    "s14": {"str": 136, "end": 143},
+    "s15": {"str": 144, "end": 152},
+    
+    "s17": {"str": 162, "end": 169},
+    "s18": {"str": 169, "end": 177},
+    "s19": {"str": 178, "end": 185},
+    "s20": {"str": 186, "end": 194},
+    
+    "s22": {"str": 201, "end": 237}
+  }
+}

@@ -1,0 +1,43 @@
+<div class="row">
+  
+  <div class="col-lg-4 l-col-fixed f-ta-r">
+    <header>
+      <h1 class="f-title a-pt-30">{{song.title}}</h1>
+      <p class="f-author a-m-1em0">- {{song.author}}</p>
+    </header>
+    <!-- video -->
+    <div id="video{{song.id}}" class="a-w-full a-h-200"></div>
+    <h2 class="f-step a-h-70 a-pt-15"><span class="f-36">1.</span> Listen</h2>
+  </div>
+  <div class="col-lg-4"></div>
+  <!-- lyrics -->
+  <section class="col-lg-5">
+    <div class="a-bl-5s3 a-pl-15">
+      <h2 class="f-step a-h-70 a-pt-15"><span class="f-36">2.</span> Read and/or Sing this Song</span></h2>
+      <button class="btn-style btn-h-pinyin" title="display pinyin" ng-hide="song.lang!='tw'" ng-click="pinyiOn=!pinyiOn">
+        <span class="glyphicon glyphicon-collapse-down" ng-hide="pinyiOn"></span>
+        <span class="glyphicon glyphicon-collapse-up" ng-show="pinyiOn"></span>
+      </button>
+      <button class="btn-style btn-h-edit" title="edit mode (song)" text-edit>
+        <span class="glyphicon glyphicon-edit"></span>
+      </button>
+      <div class="a-m-0auto a-pb-30" contenteditable="false" spellcheck="false">
+        <p id="s{{$index+1}}" class="pop-line" ng-repeat="l in song.lyrics track by $index" repeat-ready>
+          <span class="l-lyrics f-lyrics pop-lyrics">{{l}}</span><br>
+          <span class="l-pinyin f-pinyin pop-pinyin"
+            ng-if="song.lang=='tw'" 
+            ng-show="pinyiOn&&song.pinyin[$index]!=''">{{song.pinyin[$index]}}</span>
+          <!-- remove ng-if with its controller later -->
+        </p>
+      </div>
+    </div>
+  </section>
+  <!-- notes -->
+  <section class="col-lg-3 a-pb-30">    
+    <h2 class="f-step a-h-70 a-pt-15"><span class="f-36">3.</span> Write your notes</h2>
+    <div class="note bg-line">
+      <div contenteditable="true" placeholder="Yes, right here ..."></div>
+    </div><!--end: note-->
+  </section><!--end: col-lg-4-->
+
+</div><!--end: row-->

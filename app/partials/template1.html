@@ -1,0 +1,111 @@
+<header class="lr-header">
+  <h1 class="f-title f-ta-c a-pt-20">{{song.title}}</h1>
+</header>
+<nav class="row lr-steps f-ta-c a-bt-3s3 a-pt-10">
+  <h2 class="col-lg-4 f-step">
+    2. Read full lyrics ( 
+    <span class="btn-style glyphicon glyphicon-file"></span> ) and mark on it
+  </h2>
+  <h2 class="col-lg-4 f-step">
+    1. Listen to music ( 
+    <span class="btn-style glyphicon glyphicon-play"></span> )
+  </h2>
+  <h2 class="col-lg-4 f-step">
+    3. Take notes (and/or turn on auto 
+    <span class="btn-style glyphicon glyphicon-pencil"></span> )
+  </h2>
+</nav>
+
+<div class="row lr-content">
+  <!-- script part:1/2 -->
+  <div class="col-lg-4 f-i">
+    <div class="a-pl-15 a-bl-1dg" contenteditable="true" spellcheck="false" text-mark>
+      <p collapse="!scriptOn">Refrain:<br><br></p>
+      <p>
+        On vous <span ng-show="noteOn"><b>souhaite</b><span class="f-index"> 1.</span></span><span ng-hide="noteOn">souhait</span> tout le bonheur du monde<br> 
+        Et <b ng-show="noteOn">que</b><span ng-hide="noteOn">que</span> quelqu'un vous <span ng-show="noteOn"><u>tende la main</u><span class="f-index"> 3.</span></span><span ng-hide="noteOn">tende la main</span><br> 
+        <b ng-show="noteOn">Que</b><span ng-hide="noteOn">Que</span> votre chemin évite les bombes<br> 
+        <b ng-show="noteOn">Qu'</b><span ng-hide="noteOn">Qu'</span>il <span ng-show="noteOn"><u>mène</u><span class="f-index"> 4.</span></span><span ng-hide="noteOn">mène</span> vers de calmes jardins.
+      </p>
+      <p>
+        On vous <b ng-show="noteOn">souhaite</b><span ng-hide="noteOn">souhait</span> tout le bonheur du monde<br> 
+        Pour aujourd'hui comme pour demain<br> 
+        <b ng-show="noteOn">Que</b><span ng-hide="noteOn">Que</span> votre soleil éclaircisse l'<span ng-show="noteOn"><u>ombre</u><span class="f-index"> 5.</span></span><span ng-hide="noteOn">ombre</span><br> 
+        <b ng-show="noteOn">Qu'</b><span ng-hide="noteOn">Qu'</span>il brille d'amour au quotidien. 
+      </p> 
+      <p collapse="scriptOn">
+        <br/>
+        <span ng-show="noteOn"><b>J'espère</b><span class="f-index"> 2.</span></span><span ng-hide="noteOn">J'espère</span> juste <b ng-show="noteOn">que</b><span ng-hide="noteOn">que</span> vous prendrez le temps<br>
+        De profiter de chaque instant.<br><br>
+        J'ose <b ng-show="noteOn">espérer que</b><span ng-hide="noteOn">espérer que</span> ça <span ng-show="noteOn"><u>suffira</u><span class="f-index"> 6.</span></span><span ng-hide="noteOn">suffira</span> ...<br>
+        <br>
+        - {{song.author}}
+      </p>
+    </div>
+  </div><!-- end: col-lg-4 -->
+  <!-- end of script part:1/2 -->
+  
+  <div class="col-lg-4">
+    <div collapse="scriptOn">
+      <img class="img-audio" src="http://auto.img.v4.skyrock.net/0233/12420233/pics/301808733_small.jpg" />
+    </div>  
+    <audio src="{{song.src}}" id="audioavenir" controls>
+      <p>Your browser does not support the audio element!</p>
+    </audio>
+    <button class="btn-style btn-script" title="turn on script" ng-click="scriptOn=!scriptOn">
+      <span class="glyphicon glyphicon-file"></span>
+    </button>  
+
+    <!-- script part:2/2 -->
+    <div class="a-bl-1dg a-plr-15 a-mb-30" collapse="!scriptOn">
+      <p id="s1" class="pop-part f-i">Refrain</p><br>
+      <p id="s2" class="pop-part">
+      Puisque l'avenir vous appartient<br> 
+      Puisqu'on n'contrôle pas votre destin<br> 
+      Que votre envol est pour demain<br>
+      Comme tout c'qu'on à vous offrir<br> 
+      Ne saurait toujours vous suffire<br> 
+      Dans cette liberté à venir<br> 
+      Puisqu'on n'sera pas toujours là<br> 
+      Comme on le fut aux premiers pas...
+      </p>
+      <br>
+      <p id="s3" class="pop-part f-i">Refrain</p><br>
+      <p id="s4" class="pop-part">
+      Toute une vie s'offre devant vous<br> 
+      Tant de rêves à vivre jusqu'au bout<br> 
+      Sûrement tant d'joies au rendez-vous<br>
+      Libre de faire vos propres choix<br>
+      De choisir quelle sera votre voie<br> 
+      Et où celle-ci vous emmènera<br>
+      <span ng-show="noteOn"><b>J'espère</b><span class="f-index"> 2.</span></span><span ng-hide="noteOn">J'espère</span> juste <b ng-show="noteOn">que</b><span ng-hide="noteOn">que</span> vous prendrez le temps<br>
+      De profiter de chaque instant.<br>
+      <br>
+      <p id="s5" class="pop-part f-i">Refrain</p><br>
+      <p id="s6" class="pop-part">
+      J'sais pas quel monde on vous laissera<br> 
+      On fait d'notre mieux seulement parfois,<br> 
+      J'ose <b ng-show="noteOn">espérer que</b><span ng-hide="noteOn">espérer que</span> ça <span ng-show="noteOn"><u>suffira</u><span class="f-index"> 6.</span></span><span ng-hide="noteOn">suffira</span> ...<br>
+      Pas à sauver votre insouciance<br> 
+      Mais à apaiser notre conscience<br> 
+      Pour elle j'me dois d'vous faire confiance... 
+      </p>
+      <br>
+      <p id="s7" class="pop-part f-i">Refrain</p><br>
+      <p class="f-i">
+      - {{song.author}}
+      </p>
+    </div> 
+    <!-- end of script part:2/2 -->
+  </div><!-- end: col-lg-4 -->
+
+  <div class="col-lg-4">    
+    <div class="note bg-line">
+      <div ng-include="'partials/autonotebdm.html'"></div>
+      <div contenteditable="true" placeholder="Enter your note here ..."></div>
+      <button class="btn-style btn-note-auto" title="turn on auto note" ng-click="noteOn=!noteOn">
+        <span class="glyphicon glyphicon-pencil"></span>
+      </button>
+    </div><!--end: note-->
+  </div><!--end: col-lg-4-->
+</div><!--end: row-->

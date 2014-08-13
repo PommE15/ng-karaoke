@@ -1,30 +1,329 @@
 /* app css stylesheet */
 
-.menu {
+/*--- BASE ---*/
+body {
+  width: 1024px;
+  margin: 0 auto;
+}
+
+h1, h2, p { margin: 0; }
+
+[contenteditable=true] {
+  outline: 0;
+  margin-bottom: 20px; /*re-checked, esp. for the note block*/
+}
+[contenteditable=true]:empty:before {
+  content: attr(placeholder);
+}
+/*--- BASE[end] ---*/
+
+
+/*--- LAYOUT (l*-*) ---*/
+/* => container, block, box, panel, row, col, ... */
+/* responsive(lr-*): page height */
+html,
+body   { height: 100%; }
+footer { height: 20px; }
+main   { height: calc(100% - 20px); width: 100%;}
+
+.lr-header  { height: 70px; } 
+.lr-steps   { height: 60px; margin: 0px auto; }
+.lr-content { height: calc(100% - 130px); }
+
+.lr-scroll {   
+  overflow: hidden;
+  margin-right: 0;
+}
+.lr-scroll:hover {
+  overflow: auto;
+  margin-right: -17px;
+}
+.lr-scroll-adapter {
+  /*debug: hotfix!*/
+  padding-left: 30px;
+  padding-right: 0;
+}
+/* responsive[end] */
+
+.l-nav-fixed {
+  position: fixed;
+  top: 30px;
+  z-index: 1000; /*debug: this is a hotfix!*/
+}
+.l-col-fixed {
+  position: fixed;
+  width: 320px;
+}
+
+span[class*="l-"] {
+  display: inline-block;
+}
+.l-lyrics {
+  padding-top: 0.1rem;
+  border-right: 1px dotted transparent;   /*debug hotfix: keep height, due to inline-block*/
+  border-bottom: 1px dotted transparent;  /*cover background color for popcorn selected*/
+}
+.l-pinyin {
+  margin-bottom: 0.4rem;
+  border-right: 1px dotted transparent;   /*debug hotfix: keep height, due to inline-block*/
+  vertical-align: top; /*debug hotfix: position*/
+}
+/*--- LAYOUT[end] ---*/
+
+
+/*--- FONT (f-*) ---*/
+/* => font, text, and color: h, p, span, ... */
+@font-face {
+  font-family: hei;
+  src: local('Microsoft JhengHei');
+  unicode-range: U+4E00-9FCC;
+}
+
+.f-20 { font-size: 1.25rem; }
+.f-28 { font-size: 1.75rem; }
+.f-36 { font-size: 2.25rem; }
+
+.f-b { font-weight: bold; }
+.f-i { font-style: italic; }
+.f-u { text-decoration: underline; }
+.f-ellipsis {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.f-ta-l { text-align: left; }
+.f-ta-r { text-align: right; }
+.f-ta-c { text-align: center; }
+
+.f-title {
+  color: #333;
+  font-size: 36px;
+  font-family: serif;
+  font-style: italic;
+  font-weight: bold;
+}
+.f-author {
+  color: #333;
+  font-family: serif;
+  font-style: italic;
+}
+.f-step {
+  color: lightblue;
+  font-size: 18px;
+  font-family: serif;
+  font-style: italic;
+}
+
+/* lyrics (and pinyin) */
+.f-lyrics { 
+  font-family: hei, 'Mako', sans-serif; 
+  font-size: 15px;
+}
+.f-pinyin {
+  color: darkgrey;
+  font-size: small;
+  font-style: italic;
+  white-space: pre;
+}
+/* lyrics[end]*/
+
+/* language tags */
+.f-lang-fr { color: darkgrey; }
+.f-lang-en { color: darkgrey; font-style: italic; }
+.f-grammar {
+  color: darkgrey;
+  font-family: monospace;
+  font-weight: normal;
+}
+.f-index {
+  font-size: smaller;
+  font-style: italic;
+  vertical-align: top;
+}
+/* [end] language tags */
+/*--- FONT[end] ---*/
+
+
+/*--- UI COMPONENT ---*/
+/* => modules: table, list, btn (group), ... */
+audio {
+  height: 30px;
+  background-color: #333;
+}
+.img-audio {
+  width: 320px;
+}
+
+ul .no-style {  /* remove ul default styling */
   list-style: none;
-  border-bottom: 0.1em solid black;
-  margin-bottom: 2em;
-  padding: 0 0 0.5em;
+  margin: 0;
+  padding-left: 0;
 }
 
-.menu:before {
-  content: "[";
+.btn-style {
+  color: darkgrey;
+  background: transparent;
+  font-size: 14px;
+  width: 30px;
+  height: 30px;
+  border: 0;
+  outline: 0;
+}
+.btn-script {
+  position: relative;
+  top: -30px;
+  left: 290px;
+  background-color: #333; /*tune*/
+}
+.btn-script:hover {
+  color: white;
+}
+.btn-note-auto {
+  position: absolute;
+  top: 2px;
+  right: 18px;
+}
+.btn-note-auto:hover {
+  color: #333;
+}
+.btn-v-edit   { position: absolute; top: -8px; right: -7px; }
+.btn-v-pinyin { position: absolute; top: 24px; right: -7px; }
+.btn-h-edit   { position: absolute; top: 25px; right: 7px; }
+.btn-h-pinyin { position: absolute; top: 25px; right: 35px; }
+[class*="btn-v"]:hover,
+[class*="btn-h"]:hover {
+  color: lightcoral; 
 }
 
-.menu:after {
-  content: "]";
+.note {
+  font-family: 'Kalam', serif;
+  padding: 25px 15px;
+  border-bottom: 1px solid #eee;
+  min-height: 115px; 
+  /*sync height with script later*/
+}
+.bg-line {
+  box-shadow: inset 0 25px #FCF0AD, inset 0 -25px #FCF0AD;
+  background-color: #FCF0AD;
+  background-image: 
+    linear-gradient(lightblue .1em, transparent .1em);
+    /*linear-gradient(90deg, transparent 75px, #abced4 75px, #abced4 77px, transparent 73px), <- vertical line*/
+  background-size: 100% 1.45em;
+  background-position-y: 3px;
+}
+.bg-grid{
+  box-shadow: inset 0 19px bisque, inset 0 -14px bisque, inset -1px 0 bisque;
+  background-color: bisque;
+  background-image: 
+    linear-gradient(wheat 1px, transparent 1px),
+    linear-gradient(90deg, wheat 1px, transparent 1px),
+    linear-gradient(wheat 1px, transparent 1px),
+    linear-gradient(90deg, wheat 1px, transparent 1px);
+  background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px;
+  background-position: -2px -2px, -2px -2px, -1px -1px, -1px -1px
 }
 
-.menu > li {
-  display: inline;
+/* popcornjs: highlight selected sentence(s) */
+.pop-part.selected,
+.pop-line.selected .pop-lyrics,
+.pop-line.selected .pop-lyrics-inset {
+  color: white;
+  background-color: #333;
+  box-shadow: -15px 0 #333, -20px 0 lightcoral, 15px 0 #333;
+}
+.pop-line.selected .pop-lyrics-inset {
+  box-shadow: -10px 0 #333, -15px 0 lightcoral, 10px 0 #333;
+}
+.pop-line.selected .pop-pinyin {
+  color: black;
+  box-shadow: -15px 0 #333, -20px 0 lightcoral;
+}
+/* popcornjs[end]*/
+/*--- UI COMPONENT [end] ---*/
+
+
+/*--- ATOMIC: ---*/
+/* => http://www.smashingmagazine.com/2013/10/21/challenging-css-best-practices-atomic-approach */
+.a-w-full { width : 100%; }
+.a-h-full { height: 100%; }
+.a-h-200  { height: 200px; }
+.a-h-70   { height: 70px; }
+
+.a-bt-3s3 { border-top : 3px solid #333; }
+.a-bl-5s3 { border-left: 5px solid #333; }
+.a-bl-1dg { border-left: 1px dotted grey; }
+
+.a-m-0auto{ margin: 0 auto; }
+.a-m-1em0 { margin: 1em 0; }
+.a-mb-30  { margin-bottom: 30px; }
+
+.a-pt-10  { padding-top: 10px; }
+.a-pt-15  { padding-top: 15px; }
+.a-pt-20  { padding-top: 20px; }
+.a-pt-30  { padding-top: 30px; }
+.a-pb-30  { padding-bottom: 30px; }
+.a-pl-0   { padding-left: 0; }
+.a-pl-15  { padding-left: 15px; }
+.a-pl-30  { padding-left: 30px; }
+.a-pr-0   { padding-right: 0; }
+.a-plr-15 {      
+  padding-left: 15px;
+  padding-right: 15px; 
+}
+/*--- ATOMIC[end] ---*/
+
+
+/*--- MEDIA QUERY ---*/
+/*debug: come back to check all of these*/
+@media (max-width: 1200px) {
+  body {
+      width: 100%;
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 0 60px;
+  }
+  .l-col-fixed {
+    position: relative;
+    width: 100%;
+    padding-left: 0;
+  }
+  .l-nav-fixed {
+    left: 15px;
+  }
+
+  .lr-steps,
+  .lr-content { 
+    height: auto; 
+  }
+  .lr-scroll,   
+  .lr-scroll:hover {
+    overflow: visible;
+    margin-right: 0;
+  }
+  .lr-scroll-adapter {
+    padding: 15px;
+  }
+
+  .l-col-fixed.col-lg-4 {
+    margin-left: 15px;
+    padding-right: 30px;
+  }
+
+  .btn-script{
+    top: 1px;
+    left: -14px;
+  }
 }
 
-.menu > li:before {
-  content: "|";
-  padding-right: 0.3em;
+@media (max-width: 480px) {
+  body {
+      width: 400px;
+      margin: 0 auto;
+      padding: 0 30px;
+  }
+  .l-nav-fixed {
+    left: 5px;
+  }
 }
-
-.menu > li:nth-child(1):before {
-  content: "";
-  padding: 0;
-}
+/*--- MEDIA QUERY [end] ---*/

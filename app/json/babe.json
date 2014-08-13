@@ -1,0 +1,88 @@
+{
+  "id"    : "babe",
+  "title" : "寶貝",
+  "author": "張懸",
+  "src"   : "http://youtu.be/gt7ZO5YAMuM",
+  "lang"  : "tw",
+  
+  "lyrics": [
+    "我的寶貝 寶貝",
+    "給你一點甜甜，讓你今夜都好眠",
+    "我的小鬼 小鬼",
+    "逗逗你的眉眼，讓你喜歡這世界",
+    "-",
+    "副歌：",
+    "嘩啦啦啦啦啦我的寶貝",
+    "倦的時候有個人陪",
+    "唉呀呀呀呀呀我的寶貝",
+    "要你知道你最美", 
+    "-",
+    "我的寶貝 寶貝",
+    "給你一點甜甜，讓你今夜很好眠",
+    "我的小鬼 小鬼",
+    "捏捏你的小臉，讓你喜歡整個明天",
+    "-",
+    "副歌",
+    "-",
+    "嘩啦啦啦啦啦 我的寶貝",
+    "孤單時有人把你想念",
+    "唉呀呀呀呀呀 我的寶貝",
+    "要你知道你最美",                                        
+    "-",    
+    "副歌"
+  ],         
+                   
+  "pinyin": [
+    "wǒ de bǎo bèi  bǎo bèi", 
+    "gěi nǐ yī diǎn tián tián ，ràng nǐ jīn yè dōu hǎo mián", 
+    "wǒ de xiǎo guǐ  xiǎo guǐ", 
+    "dòu dòu nǐ de méi yǎn ，ràng nǐ xǐ huān zhè shì jiè", 
+    "",
+    "",
+    "huá lā lā lā lā lā wǒ de bǎo bèi", 
+    "juàn de shí hòu yǒu gè rén péi", 
+    "āi ya ya ya ya ya wǒ de bǎo bèi", 
+    "yào nǐ zhī dào nǐ zuì měi", 
+    "",
+    "wǒ de bǎo bèi  bǎo bèi", 
+    "gěi nǐ yī diǎn tián tián ，ràng nǐ jīn yè hěn hǎo mián", 
+    "wǒ de xiǎo guǐ  xiǎo guǐ", 
+    "niē niē nǐ de xiǎo liǎn ，ràng nǐ xǐ huān zhěng gè míng tiān", 
+    "",
+    "",
+    "",
+    "huá lā lā lā lā lā  wǒ de bǎo bèi", 
+    "gū dān shí yǒu rén bǎ nǐ xiǎng niàn", 
+    "āi ya ya ya ya ya  wǒ de bǎo bèi", 
+    "yào nǐ zhī dào nǐ zuì měi", 
+    "",
+    ""
+  ],
+
+  "times": {
+    "s1":  {"str": 15,    "end": 18},
+    "s2":  {"str": 18,    "end": 23.25},
+    "s3":  {"str": 23.25, "end": 26},
+    "s4":  {"str": 26,    "end": 31},
+   
+ 
+    "s7":  {"str": 31.5,  "end": 35.5},
+    "s8":  {"str": 35.5,  "end": 39.75},
+    "s9":  {"str": 39.75, "end": 43.25},
+    "s10": {"str": 43.25, "end": 47},
+
+    "s12": {"str": 49,    "end": 52},
+    "s13": {"str": 52,    "end": 57.5},
+    "s14": {"str": 57.5,  "end": 60},
+    "s15": {"str": 60,    "end": 65.5},
+    
+    "s17": {"str": 65.5,  "end": 81},
+    
+    "s19": {"str": 84,    "end": 87.5},
+    "s20": {"str": 87.5,  "end": 91},
+    "s21": {"str": 91,    "end": 95.25},
+    "s22": {"str": 95.25, "end": 99},
+    
+    "s24": {"str": 117,   "end": 134}
+  }
+}
