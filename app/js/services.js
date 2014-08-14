@@ -14,7 +14,7 @@ angular.module('myApp.services', [])
     },
     video: function(id, src) {
       var video = Popcorn.HTMLYouTubeVideoElement("#video"+id);
-      video.src = src + "?end=0&autoplay=0&controls=1";
+      video.src = src + "?end=0&autoplay=0&controls=1&enablejsapi=1";
       pop = Popcorn(video);
       //return pop;
     },
