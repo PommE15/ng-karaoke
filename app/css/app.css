@@ -293,6 +293,7 @@ ul .no-style {  /* remove ul default styling */
     left: 15px;
   }
 
+  .lr-header,
   .lr-steps,
   .lr-content { 
     height: auto; 
@@ -300,7 +301,7 @@ ul .no-style {  /* remove ul default styling */
   .lr-scroll,   
   .lr-scroll:hover {
     overflow: visible;
-    margin-right: 0;
+    margin-right: 15px;
   }
   .lr-scroll-adapter {
     padding: 15px;
@@ -319,12 +320,16 @@ ul .no-style {  /* remove ul default styling */
 
 @media (max-width: 480px) {
   body {
-      width: 400px;
+      width: 360px;
       margin: 0 auto;
       padding: 0 30px;
   }
   .l-nav-fixed {
     left: 5px;
+  }
+  .btn-script{
+    top: -30px;
+    left: 290px;
   }
 }
 /*--- MEDIA QUERY [end] ---*/
