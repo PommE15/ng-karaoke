@@ -210,8 +210,8 @@ ul .no-style {  /* remove ul default styling */
   /*sync height with script later*/
 }
 .bg-line {
-  box-shadow: inset 0 25px #FCF0AD, inset 0 -25px #FCF0AD;
-  background-color: #FCF0AD;
+  box-shadow: inset 0 25px #ffff45, inset 0 -25px #ffff60;/*#FCF0AD;*/
+  background-color: #ffff60;
   background-image: 
     linear-gradient(lightblue .1em, transparent .1em);
     /*linear-gradient(90deg, transparent 75px, #abced4 75px, #abced4 77px, transparent 73px), <- vertical line*/
