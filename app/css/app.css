@@ -66,12 +66,13 @@ span[class*="l-"] {
 }
 .l-lyrics {
   padding-top: 0.1rem;
-  border-right: 1px dotted transparent;   /*debug hotfix: keep height, due to inline-block*/
-  border-bottom: 1px dotted transparent;  /*cover background color for popcorn selected*/
+  border-right: 1px solid transparent;   /*debug hotfix: keep height, due to inline-block*/
+  border-bottom: 1px solid transparent;  /*cover background color for popcorn selected*/
 }
 .l-pinyin {
   margin-bottom: 0.4rem;
-  border-right: 1px dotted transparent;   /*debug hotfix: keep height, due to inline-block*/
+  border-right: 1px solid transparent;   /*debug hotfix: keep height, due to inline-block*/
+  border-top: 1px solid transparent;     /*cover background color for popcorn selected*/
   vertical-align: top; /*debug hotfix: position*/
 }
 /*--- LAYOUT[end] ---*/
